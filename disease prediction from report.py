@@ -10,9 +10,16 @@ import pickle
 from sklearn.preprocessing import StandardScaler
 
 # --- Load models ---
-parkinsons_model = pickle.load(open("dataset for multiple disease prediction/parkinsons_model.sav", 'rb'))
-heart_model = pickle.load(open("dataset for multiple disease prediction/heart_disease_model.sav", 'rb'))
-diabetes_model = pickle.load(open("dataset for multiple disease prediction/diabetes_model.sav", 'rb'))
+@st.cache_resource
+def load_model(path):
+    import pickle
+    with open(path, 'rb') as file:
+        return pickle.load(file)
+
+parkinsons_model = load_model('dataset for multiple disease prediction/parkinsons_model.sav')
+heart_model = load_model('dataset for multiple disease prediction/heart_disease_model.sav')
+diabetes_model = load_model('dataset for multiple disease prediction/diabetes_model.sav')
+
 
 
 # --- Define expected features ---
