@@ -10,9 +10,9 @@ import pickle
 from sklearn.preprocessing import StandardScaler
 
 # --- Load models ---
-parkinsons_model = pickle.load(open("F:\\d drive\\ml project file\\parkinsons_model.sav", 'rb'))
-heart_model = pickle.load(open("F:\\d drive\\flask2025\\env\\heart_disease_model.sav", 'rb'))
-diabetes_model = pickle.load(open("F:\\d drive\\flask2025\\env\\diabetes_model.sav", 'rb'))
+parkinsons_model = pickle.load(open("E:\\MULTIPLE_DISEASE_PREDICTION-main\\dataset for multiple disease prediction\\parkinsons_model.sav", 'rb'))
+heart_model = pickle.load(open("E:\\MULTIPLE_DISEASE_PREDICTION-main\\dataset for multiple disease prediction\\heart_disease_model.sav", 'rb'))
+diabetes_model = pickle.load(open("E:\\MULTIPLE_DISEASE_PREDICTION-main\\dataset for multiple disease prediction\\diabetes_model.sav",'rb'))
 
 # --- Define expected features ---
 FEATURES = {
